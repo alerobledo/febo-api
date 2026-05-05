@@ -1,14 +1,15 @@
 {
   "name": "febo-api",
   "version": "1.0.0",
+  "type": "module",
   "description": "FEBO API - Rewards PWA Backend",
   "main": "dist/interfaces/http/index.js",
   "scripts": {
     "start": "node dist/interfaces/http/index.js",
     "dev": "nodemon src/interfaces/http/index.ts",
     "build": "tsc",
-    "test": "jest",
-    "lint": "eslint . --ext .ts",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "lint": "eslint .",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev"
   },

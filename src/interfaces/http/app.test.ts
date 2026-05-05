@@ -1,6 +1,6 @@
 import request from 'supertest';
-import { app, finalizeApp } from './app';
-import { AppError } from '@/domain/errors/app-error';
+import { app, finalizeApp } from './app.js';
+import { AppError } from '../../domain/errors/app-error.js';
 
 describe('App', () => {
   describe('GET /health', () => {
